@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+	<head>
+    <title>User Login and Registration</title>
+		<link rel = "stylesheet" type = "text/css" href = "../assets/css/style.css">
+		<link rel = "stylesheet" type = "text/css" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "login-box">
+				<div class = "row">
+					<div class = "col-md-6 login-left">
+						<h2> Login here </h2>
+						<form class="login-form"  #myFormLogin = "ngForm">
+							<div class = "form-group">
+								<label class="sr-only" for="form-username">Username:</label>
+								<input #username type = "text" name = "form-username" class="form-username form-control" id="form-username" required>
+							</div>
+							<div class = "form-group">
+								<label class="sr-only" for="form-username">Password:</label>
+								<input #password type = "password" name = "form-password" class="form-password form-control" id="form-password" required>
+							</div>
+							<button type = "submit" class = "btn btn-primary" (click)="verifyUser(username.value,password.value); myFormLogin.reset()"> Login </button>
+						</form>
+					</div>
+
+					<div class = "col-md-6 login-right">
+						<h2> Register here </h2>
+						<form class = "registration-form" #myForm="ngForm">
+							<div class = "form-group">
+								<label class="sr-only" for="form-user">Username:</label>
+								<input #user type = "text" name = "form-user" class="form-username form-control " id="form-user " required>
+							</div>
+							<div class = "form-group">
+								<label class="sr-only" for="form-pass">Password:</label>
+								<input #pass type = "password" name = "form-pass" class="form-password form-control " id="form-pass " required>
+							</div>
+							<button type = "submit" class = "btn btn-primary" (click)="addNewUser(user.value,pass.value)"> Register </button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
